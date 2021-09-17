@@ -44,6 +44,7 @@ const useDisplay = () => {
   // debounce와 throttling의 차이점 알아보기
   // debounce  : 함수 호출이 연속적으로 될 때, 제일 처음 또는 마지막 함수만 호출하도록 하는 것
   // throttling: 마지막 함수가 호출된 후 일정 시간이 지나기 전에 다시 호출되지 않도록 하는 것
+  // 쓰로틀링과 디바운싱을 사용하는 이유는 연속적인 이벤트가 발생하면 특정 시스템에 부하를 줄 수 있기 때문에 사용한다.
   const windowResizeHandler = _.debounce(() => {
     setWidth(window.innerWidth);
   }, 300);
